@@ -1,0 +1,38 @@
+{
+  "name": "spite-memory-test",
+  "description": "spike-memory-test",
+  "version": "0.0.1",
+  "author": "knupska",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/knupska/spike-memory-test/issues",
+  "dependencies": {
+    "reshape-standard": "^1.2.0",
+    "spike": "1.3.1",
+    "spike-css-standards": "^2.0.1",
+    "spike-js-standards": "^2.0.2",
+    "spike-page-id": "^1.0.0",
+    "spike-records": "^1.0.2",
+    "webpack": "^2.5.1"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "rimraf": "^2.6.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
+  },
+  "homepage": "https://github.com/knupska/spike-memory-test",
+  "main": "app.js",
+  "private": true,
+  "repository": "https://github.com/knupska/spike-memory-test",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "precommit": "npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava",
+    "start": "spike watch",
+    "build": "spike compile",
+    "prod": "NODE_ENV=production spike compile -e production"
+  }
+}
